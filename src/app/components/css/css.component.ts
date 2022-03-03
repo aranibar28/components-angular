@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-css',
-  template: ` <p>css works!</p> `,
+  template: `
+    <hr />
+    <p>Estilos CSS dessde el componente !!</p>
+  `,
   styles: [
     `
       p {

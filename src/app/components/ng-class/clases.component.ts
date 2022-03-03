@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './clases.component.html',
 })
 export class ngClassComponent {
-  alert: string = 'alert-danger';
+  alert: string = 'alert-primary';
   loading: boolean = false;
 
   propiedades: any = {

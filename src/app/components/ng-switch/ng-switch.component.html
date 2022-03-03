@@ -1,15 +1,23 @@
-<div [ngSwitch]="alert">
+<h3>ngSwitch</h3>
+
+<div [ngSwitch]="alert" class="my-4">
+  <div *ngSwitchCase="'primary'">primary</div>
   <div *ngSwitchCase="'success'">success</div>
-  <div *ngSwitchCase="'info'">info</div>
+  <div *ngSwitchCase="'danger'">danger</div>
   <div *ngSwitchCase="'warning'">warning</div>
-  <div *ngSwitchDefault>danger</div>
+  <div *ngSwitchCase="'info'">info</div>
+  <div *ngSwitchDefault>primary</div>
 </div>
 
-<button type="button" class="btn btn-success m-2" (click)="alert = 'success'">
-  Button
-</button>
+<div class="d-flex gap-3">
+  <button class="btn btn-primary" (click)="alert = 'primary'">Primary</button>
+  <button class="btn btn-success" (click)="alert = 'success'">Success</button>
+  <button class="btn btn-danger" (click)="alert = 'danger'">Danger</button>
+  <button class="btn btn-warning" (click)="alert = 'warning'">Warning</button>
+  <button class="btn btn-info" (click)="alert = 'info'">Info</button>
+</div>
 
-<div [ngSwitch]="alert">
+<div [ngSwitch]="alert" class="my-4">
   <div *ngSwitchCase="'primary'" class="alert alert-primary" role="alert">
     A simple primary alert—check it out!
   </div>
@@ -22,7 +30,12 @@
   <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
     A simple warning alert—check it out!
   </div>
-  <div *ngSwitchDefault class="alert alert-info" role="alert">
+  <div *ngSwitchCase="'info'" class="alert alert-info" role="info">
+    A simple info alert—check it out!
+  </div>
+  <div *ngSwitchDefault class="alert alert-primary" role="alert">
     A simple info alert—check it out!
   </div>
 </div>
+
+<br />

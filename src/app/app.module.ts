@@ -10,6 +10,11 @@ import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { APP_ROUTING } from './app.routes';
+import { UserComponent } from './components/user/user.component';
+import { UserNewComponent } from './components/user/user-new.component';
+import { UserEditComponent } from './components/user/user-edit.component';
+import { UserDetailComponent } from './components/user/user-detail.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,11 @@ import { APP_ROUTING } from './app.routes';
     ResaltedDirective,
     NgSwitchComponent,
     HomeComponent,
+    UserComponent,
+    UserNewComponent,
+    UserEditComponent,
+    UserDetailComponent,
+    NavbarComponent,
   ],
   imports: [BrowserModule, APP_ROUTING],
   providers: [],

@@ -1,20 +1,17 @@
-<div [ngClass]="alert" class="alert" role="alert">
-  A simple primary alert—check it out!
+<hr />
+<h3 class="mb-4">ngClass</h3>
+<div class="d-flex gap-3">
+  <button class="btn btn-primary" (click)="alert = 'alert-primary'">Primary</button>
+  <button class="btn btn-success" (click)="alert = 'alert-success'">Success</button>
+  <button class="btn btn-danger" (click)="alert = 'alert-danger'">Danger</button>
+  <button class="btn btn-warning" (click)="alert = 'alert-warning'">Warning</button>
+  <button class="btn btn-info" (click)="alert = 'alert-info'">Info</button>
 </div>
 
-<button class="btn btn-info m-2" (click)="alert = 'alert-info'">Info</button>
-<button class="btn btn-success m-2" (click)="alert = 'alert-success'">
-  Success
-</button>
+<div [ngClass]="alert" class="mt-4 alert" role="alert">Esto es una alerta: <strong>{{alert}}</strong></div>
 
-<br />
-
-<h3
-  [ngClass]="{
-    'text-danger': propiedades.danger,
-    'text-info': !propiedades.danger
-  }"
->
+<h3 class="mb-4">ngClass condicional</h3>
+<h3 [ngClass]="{'text-danger': propiedades.danger, 'text-info': !propiedades.danger }">
   Hola mundo!
 </h3>
 
@@ -26,10 +23,11 @@
   }"
   class="btn"
 >
-  Cambiar
+  Cambiar {{ propiedades.danger }}
 </button>
 
 <hr />
+
 <h3>Proceso Asincrono</h3>
 <button (click)="Execute()" class="btn btn-primary" [disabled]="loading">
   <i

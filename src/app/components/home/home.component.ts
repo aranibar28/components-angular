@@ -4,11 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   template: `
     <app-ng-styles></app-ng-styles>
+    <p [appResalted]="'orange'">Directiva appResalted</p>
     <app-css></app-css>
     <app-ng-class></app-ng-class>
-    <p [appResalted]="'orange'">Hola mundo!</p>
     <app-ng-switch></app-ng-switch>
-    <p>home works!</p>
   `,
   styles: [],
 })
